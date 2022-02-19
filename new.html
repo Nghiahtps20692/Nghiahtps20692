@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--  -->
+    <link rel="stylesheet" href="./css/new.css">
+    <!--link icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="top-container">
+        <header id="myheader" class="header">
+
+            <a href="./Trangchu.html" class="logo">
+                <img src=" ./image/logo.png" alt="Logo">
+            </a>
+            <div class="icons">
+                <a href="#">
+                    <div class="fas fa-user" id="user"></div>
+                </a>
+                <a class="timkiem" href="#">
+                    <div class="fa fa-search"></div>
+                </a>
+                <span id="main" style="font-size:30px;cursor:pointer;font-size: 150%;color: rgb(20, 250, 143);"
+                    onclick="openNav()">&#128722</span>
+
+            </div>
+            <!--form ẩn-->
+         
+            
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+    </div>
+    <!--side nav -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="cart">
+            <h2>Giỏ Hàng</h2>
+            <p>
+                <a>Hiện chưa có sản phẩm</a>
+                <hr>
+                <a>TỔNG TIỀN:</a>
+                <a"> 0đ</a><br>
+                    <button type="submit" class="form-button">XEM GIỎ HÀNG</button>&emsp;
+                    <button type="submit" class="form-button">THANH TOÁN</button>
+            </p>
+        </div>
+    </div>
+
+    <!-- end header scrip -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "400px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <div class="header" id="myHeader">
+        <ul class="menu" style="margin: auto 18%;">
+            <li><a href="./new.html">Trang chủ</a></li>
+            <li><a href="./new.html">Giới thiệu</a></li>
+            <li class="has-submenu"><a href="#">Sản phẩm</a>
+                <ul class="submenu">
+                    <li><a href="#">Ống hút dương xỉ</a></li>
+                    <hr>
+                    <li><a href="#">Ống hút gạo</a></li>
+                    <hr>
+                    <li><a href="#">Ống hút tre</a></li>
+                    <hr>
+                    <li><a href="#">Ống hút cỏ</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Trách nhiệm với môi trường(CER)</a>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tra cứu đơn hàng</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+
+       <!-- slide show -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="./image/slideshow_1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="./image/slideshow_2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="./image/slideshow_3.jpg" style="width:100%">
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+            
+            <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            
+            <!-- end slide show -->
+            <div class="sanphammoi"><a><h1 style="vertical-align: middle;">Sản Phẩm Mới</h1></a></div>
+            <div class="SPmoi">
+            <div class="sp">
+                <a href="#">
+                    <img src="./image/nuihut-hinh-dai-dien-ong-hut-gao-cho-nuoc-mau-tu-nhien-op2_e1e316c92177476baac45f689f6eee15_large.jpg" alt="ỐNg hút gạo">
+                    <div class="ten">Ống hút gạo cho nước<a href="#"></a></div>
+                    <div class="gia">35,000đ</div>
+                </a>
+            </div>
+            <div class="sp">
+                <img src="./image/tre.jpg" alt="ống hút tre">
+                <div class="ten"><a href="#">Ống hút tre</a></div>
+                <div class="gia">40,000đ</div>
+            </div>
+            <div class="sp">
+                <img src="./image/ỐNg hút cỏ.jpg" alt="Ông hút cỏ">
+                <div class="ten"><a href="#">Ống hút cỏ</a></div>
+                <div class="gia">40,000đ</div>
+            </div>
+            <div class="sp">
+                <img src="./image/onghutdx2.jpg" alt="Ống hút dương xỉ">
+                <div class="ten"><a href="#">Ống hút dương xỉ</a></div>
+                <div class="gia">40,000đ</div>
+            </div>
+            <div class="sp"><img src="./image/cotuoi.jpg" alt=""></div>
+            </div>
+    </div>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
